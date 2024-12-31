@@ -1,7 +1,14 @@
-# GradLink
+# GradLink  
 
-**GradLink**  is a networking and mentorship platform designed to foster connections between current students and alumni, offering valuable career insights, mentorship opportunities, and professional guidance.
+GradLink is a networking and mentorship platform designed to foster connections between current students and alumni, offering valuable career insights, mentorship opportunities, and professional guidance.  
 
-With GradLink, students can connect with alumni from their school to receive mentorship, access career opportunities, and gain valuable advice for their professional journey.
+## About This Repository  
+
+This repository contains all the backend work I contributed to during the development of the GradLink platform. It includes essential features and services for managing users , WebSocket-based communication, and connecting students with alumni for mentorship and career guidance.  
+
+
+
+**GradLink** aims to empower students in their professional journey by leveraging the experiences and insights of alumni from their school.  
+
 
 
