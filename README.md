@@ -1,31 +1,7 @@
 # GradLink
 
-**GradLink** is an innovative platform that bridges the gap between students and graduates. It provides a unified space for networking, mentorship, and career opportunities, fostering meaningful connections for academic and professional growth.
+**GradLink**  is a networking and mentorship platform designed to foster connections between current students and alumni, offering valuable career insights, mentorship opportunities, and professional guidance.
 
-## Features
+With GradLink, students can connect with alumni from their school to receive mentorship, access career opportunities, and gain valuable advice for their professional journey.
 
-- **Student-Graduate Networking**  
-  Connect with graduates from your institution to gain insights and guidance.
-
-- **Mentorship Program**  
-  Pair students with graduates who can mentor them in their chosen field.
-
-- **Job and Internship Listings**  
-  Explore career opportunities shared by alumni and organizations.
-
-- **Events**  
-  Stay updated on upcoming alumni talks, and networking events.
-
-
-
-## Technology Stack
-
-- **Frontend**: Angular 18 
-- **Backend**: Spring Boot 
-- **Database**: PostgreSQL 
-
-
-## Contributors
-- **Backend** : MalikaTajidi && anasbenmguirida
-- **Frontend** : SafaeLabjakh && Soumaiakerouansalah
 
