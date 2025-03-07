@@ -8,7 +8,6 @@ RUN mvn clean install -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 
-# Copy the JAR file from the build stage
 COPY --from=build /app/target/backend-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
