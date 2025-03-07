@@ -1,22 +1,29 @@
-# Fetch node image 
-FROM node:20.11.0-alpine
+#this is the new dockerfile it is better for production 
+# Use Node.js as the base image for building the Angular app
+FROM node:latest as build-stage
 
-# Set the working directory (Inside the container)
 WORKDIR /app
 
-# Copy the package.json and package-lock.json to the container
 COPY package*.json ./
+RUN npm install
 
-# Build angular application 
-RUN npm install 
+# Install Angular CLI globally
+RUN npm install -g @angular/cli
 
-# Copy the source code to the container
 COPY . .
+RUN ng build --configuration production
 
-RUN npm run build 
+#The Angular app is built using ng build, creating static files in dist/front/browser/.
+#Nginx takes these files and serves them to users when they visit the website.
+#When a user opens the app, Nginx serves index.html, which loads the JavaScript and styles.
+#Angular handles routing dynamically, and Nginx ensures the app works even with deep links
+FROM nginx:latest
 
-# Expose the port 4200
-EXPOSE 4200
+# Copy built files from the previous stage to Nginx's web root
+COPY --from=build-stage /app/dist/front/browser/ /usr/share/nginx/html
 
-# Start the application
-CMD ["npm", "start"] 
+
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD nginx -g "daemon off;"
