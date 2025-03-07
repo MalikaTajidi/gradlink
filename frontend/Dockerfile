@@ -22,7 +22,6 @@ FROM nginx:latest
 # Copy built files from the previous stage to Nginx's web root
 COPY --from=build-stage /app/dist/front/browser/ /usr/share/nginx/html
 
-
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
